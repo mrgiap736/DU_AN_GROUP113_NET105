@@ -2,7 +2,7 @@
 {
     public class DiscountCategory
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public int Type {  get; set; }
         public int Category {  get; set; }
 

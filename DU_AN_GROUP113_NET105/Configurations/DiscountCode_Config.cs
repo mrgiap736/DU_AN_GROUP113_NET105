@@ -8,7 +8,11 @@ namespace DU_AN_GROUP113_NET105.Areas
     {
         public void Configure(EntityTypeBuilder<DiscountCode> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => x.Id);
+
+            builder.HasOne(x => x.Cart).WithMany(x => x.DiscountCodes).HasForeignKey(x => x.CustomerId);
+
+            builder.HasOne(x => x.DiscountCategory).WithMany(x => x.DiscountCodes).HasForeignKey(x => x.CategoryId);
         }
     }
 }

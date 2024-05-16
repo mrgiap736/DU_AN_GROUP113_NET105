@@ -8,7 +8,15 @@ namespace DU_AN_GROUP113_NET105.Areas
     {
         public void Configure(EntityTypeBuilder<Customer> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => x.Id);//Khoa chinh
+
+            //Username
+            builder.HasIndex(x => x.Username).IsUnique(); //Ràng buộc là duy nhất
+
+            //Email
+            builder.HasIndex(x => x.Email).IsUnique(); //Ràng buộc là duy nhất
+
+
         }
     }
 }
