@@ -5,10 +5,10 @@
         public int Status { get; set; }
         
         //Quan he
-        public Guid UserId { get; set; }
+        public Guid CustomerId { get; set; }
         public string DiscountId { get; set; } 
         
-        public User User { get; set; }
+        public Customer Customer { get; set; }
         public virtual ICollection<DiscountCode>? DiscountCodes { get; set; }
     }
 }

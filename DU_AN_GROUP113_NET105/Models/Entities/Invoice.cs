@@ -7,8 +7,11 @@
         public DateTime CreatedDate { get; set; }
 
         //Quan he
-        public Guid UserId { get; set; }
-        public User User { get; set; }
+        public Guid CustomerId { get; set; }
+        public Guid StaffId { get; set; }
+
+        public Staff Staff { get; set; }
+        public Customer Customer { get; set; }
         public virtual ICollection<InvoiceDetail> InvoiceDetails { get; set; }
     }
 }

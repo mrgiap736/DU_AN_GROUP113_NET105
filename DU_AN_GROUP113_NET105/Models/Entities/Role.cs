@@ -7,6 +7,6 @@
         public int Status { get; set; }
 
         //Quan he
-        public virtual List<Account> Accounts { get; set; }
+        public virtual List<Staff> Staffs { get; set; }
     }
 }
