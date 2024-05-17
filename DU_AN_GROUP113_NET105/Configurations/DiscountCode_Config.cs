@@ -12,7 +12,7 @@ namespace DU_AN_GROUP113_NET105.Areas
 
             builder.HasOne(x => x.Cart).WithMany(x => x.DiscountCodes).HasForeignKey(x => x.CustomerId);
 
-            builder.HasOne(x => x.DiscountCategory).WithMany(x => x.DiscountCodes).HasForeignKey(x => x.CategoryId);
+            builder.HasOne(x => x.DiscountCategory).WithMany(x => x.DiscountCodes).HasForeignKey(x => x.DiscountCategoryId);
         }
     }
 }

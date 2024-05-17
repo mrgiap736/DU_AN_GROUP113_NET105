@@ -28,8 +28,8 @@ namespace DU_AN_GROUP113_NET105.Models.Entities
         //Quan hệ
 
         public Guid? CustomerId { get; set; }
-        public int CategoryId { get; set; } 
-        public DiscountCategory DiscountCategory { get; set; }
+        public Guid? DiscountCategoryId { get; set; } 
+        public DiscountCategory?  DiscountCategory { get; set; }
         public Cart? Cart { get; set; }
 
 
@@ -40,7 +40,7 @@ namespace DU_AN_GROUP113_NET105.Models.Entities
             if (instance != null)
             {
                 // Nếu CategoryId = 0, cho phép nhập số bình thường và số dương
-                if (instance.CategoryId == 0)
+                if (instance.Value == 0)
                 {
                     if (value <= 0)
                     {
@@ -48,7 +48,7 @@ namespace DU_AN_GROUP113_NET105.Models.Entities
                     }
                 }
                 // Nếu CategoryId = 1, chỉ cho phép nhập giá trị từ 1 đến 100 và số dương
-                else if (instance.CategoryId == 1)
+                else if (instance.Value == 1)
                 {
                     if (value <= 0 || value > 100)
                     {
