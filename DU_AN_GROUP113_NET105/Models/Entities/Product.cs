@@ -12,13 +12,13 @@
         public string Details { get; set; }
 
         //các quan hệ 
-        public Guid BrandId { get; set; }
-        public Guid ProductCategoryId { get; set; }
-        public Guid SupplierId { get; set; }
+        public Guid? BrandId { get; set; }
+        public Guid? ProductCategoryId { get; set; }
+        public Guid? SupplierId { get; set; }
 
         public Brand? Brand { get; set; }
         public Supplier? Supplier { get; set; }
-        public ProductCategory? Category { get; set; }
+        public ProductCategory? ProductCategory { get; set; }
 
         public virtual ICollection<InvoiceDetail> InvoiceDetails { get; set; }
 

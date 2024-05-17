@@ -8,7 +8,7 @@ namespace DU_AN_GROUP113_NET105.Areas
     {
         public void Configure(EntityTypeBuilder<Role> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => x.Id);
         }
     }
 }

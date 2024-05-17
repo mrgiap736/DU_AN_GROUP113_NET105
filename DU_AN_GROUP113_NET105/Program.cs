@@ -12,7 +12,7 @@ namespace DU_AN_GROUP113_NET105
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            builder.Services.AddDbContext<ProjectContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ProjectASM_GR113")));
+            builder.Services.AddDbContext<ProjectContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ASM")));
 
             var app = builder.Build();
 

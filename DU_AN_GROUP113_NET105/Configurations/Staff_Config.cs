@@ -8,7 +8,8 @@ namespace DU_AN_GROUP113_NET105.Areas
     {
         public void Configure(EntityTypeBuilder<Staff> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => x.Id);
+            builder.HasOne(x => x.Role).WithMany(x => x.Staffs).HasForeignKey(x => x.RoleId);
         }
     }
 }

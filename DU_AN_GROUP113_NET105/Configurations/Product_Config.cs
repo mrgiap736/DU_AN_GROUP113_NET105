@@ -8,7 +8,10 @@ namespace DU_AN_GROUP113_NET105.Areas
     {
         public void Configure(EntityTypeBuilder<Product> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => x.Id);
+            builder.HasOne(x => x.ProductCategory).WithMany(x => x.Products).HasForeignKey(x => x.ProductCategoryId);
+            builder.HasOne(x => x.Brand).WithMany(x => x.Products).HasForeignKey(x => x.BrandId);
+            builder.HasOne(x => x.Supplier).WithMany(x => x.Products).HasForeignKey(x => x.SupplierId);
         }
     }
 }
