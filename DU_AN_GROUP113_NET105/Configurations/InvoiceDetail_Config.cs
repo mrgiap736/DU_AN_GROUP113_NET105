@@ -11,6 +11,8 @@ namespace DU_AN_GROUP113_NET105.Areas
             builder.HasKey(x => x.Id);
 
             builder.HasOne(x => x.Invoice).WithMany(x => x.InvoiceDetails).HasForeignKey(x => x.InvoiceId);
+
+            builder.HasOne(x => x.Product).WithMany(x => x.InvoiceDetails).HasForeignKey(x => x.ProductId);
         }
     }
 }

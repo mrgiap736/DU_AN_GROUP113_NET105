@@ -1,9 +1,15 @@
-﻿namespace DU_AN_GROUP113_NET105.Models.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace DU_AN_GROUP113_NET105.Models.Entities
 {
     public class Invoice
     {
-        public Guid Id { get; set; }      
+        public Guid Id { get; set; }
+
+        [Required]
         public int Status { get; set; }
+
+        [Required]
         public DateTime CreatedDate { get; set; }
 
         //Quan he

@@ -15,5 +15,7 @@ namespace DU_AN_GROUP113_NET105.Models.Entities
         
         public Customer Customer { get; set; }
         public virtual ICollection<DiscountCode>? DiscountCodes { get; set; }
+
+        public virtual ICollection<CartDetail> CartDetails { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DU_AN_GROUP113_NET105.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class ProjectASM_GR113 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -16,7 +16,7 @@ namespace DU_AN_GROUP113_NET105.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -60,7 +60,7 @@ namespace DU_AN_GROUP113_NET105.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
                     Sort = table.Column<int>(type: "int", nullable: false)
                 },
@@ -75,7 +75,7 @@ namespace DU_AN_GROUP113_NET105.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Name = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -88,10 +88,10 @@ namespace DU_AN_GROUP113_NET105.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -121,14 +121,14 @@ namespace DU_AN_GROUP113_NET105.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Username = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Username = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     BirthDay = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Phone = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     Status = table.Column<int>(type: "int", nullable: false),
                     RoleId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -148,13 +148,13 @@ namespace DU_AN_GROUP113_NET105.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     Image = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     PromotionPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
-                    Details = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Details = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BrandId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     ProductCategoryId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     SupplierId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)

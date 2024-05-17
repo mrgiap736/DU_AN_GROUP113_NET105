@@ -30,7 +30,8 @@ namespace DU_AN_GROUP113_NET105.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
@@ -250,13 +251,16 @@ namespace DU_AN_GROUP113_NET105.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Details")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<byte[]>("Image")
                         .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
@@ -294,6 +298,7 @@ namespace DU_AN_GROUP113_NET105.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Sort")
@@ -316,7 +321,9 @@ namespace DU_AN_GROUP113_NET105.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -333,25 +340,36 @@ namespace DU_AN_GROUP113_NET105.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<DateTime>("BirthDay")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
@@ -360,7 +378,9 @@ namespace DU_AN_GROUP113_NET105.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Username")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.HasKey("Id");
 
@@ -376,15 +396,21 @@ namespace DU_AN_GROUP113_NET105.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Address")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Phone")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -406,13 +432,13 @@ namespace DU_AN_GROUP113_NET105.Migrations
             modelBuilder.Entity("DU_AN_GROUP113_NET105.Models.Entities.CartDetail", b =>
                 {
                     b.HasOne("DU_AN_GROUP113_NET105.Models.Entities.Cart", "Cart")
-                        .WithMany()
+                        .WithMany("CartDetails")
                         .HasForeignKey("CartId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("DU_AN_GROUP113_NET105.Models.Entities.Product", "Product")
-                        .WithMany()
+                        .WithMany("CartDetails")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -514,6 +540,8 @@ namespace DU_AN_GROUP113_NET105.Migrations
 
             modelBuilder.Entity("DU_AN_GROUP113_NET105.Models.Entities.Cart", b =>
                 {
+                    b.Navigation("CartDetails");
+
                     b.Navigation("DiscountCodes");
                 });
 
@@ -536,6 +564,8 @@ namespace DU_AN_GROUP113_NET105.Migrations
 
             modelBuilder.Entity("DU_AN_GROUP113_NET105.Models.Entities.Product", b =>
                 {
+                    b.Navigation("CartDetails");
+
                     b.Navigation("InvoiceDetails");
                 });
 
