@@ -31,7 +31,7 @@ namespace DU_AN_GROUP113_NET105.Models.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP\\SQLEXPRESS;Database=ProjectASM_GR113;Trusted_Connection=True;TrustServerCertificate=true;");
+            optionsBuilder.UseSqlServer("Server=MRG;Database=ProjectASM_GR113;Trusted_Connection=True;TrustServerCertificate=true;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

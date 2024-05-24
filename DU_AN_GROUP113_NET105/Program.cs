@@ -33,7 +33,7 @@ namespace DU_AN_GROUP113_NET105
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{area=Admin}/{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
         }

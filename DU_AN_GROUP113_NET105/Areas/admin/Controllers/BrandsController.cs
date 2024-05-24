@@ -10,7 +10,7 @@ using DU_AN_GROUP113_NET105.Models.Entities;
 
 namespace DU_AN_GROUP113_NET105.Areas.admin.Controllers
 {
-    [Area("admin")]
+    [Area("Admin")]
     [Route("admin/[controller]/[action]")]
     public class BrandsController : Controller
     {

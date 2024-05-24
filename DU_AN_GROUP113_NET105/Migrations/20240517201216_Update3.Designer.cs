@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DU_AN_GROUP113_NET105.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    [Migration("20240517193135_ProjectASM_GR113")]
-    partial class ProjectASM_GR113
+    [Migration("20240517201216_Update3")]
+    partial class Update3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,8 +33,8 @@ namespace DU_AN_GROUP113_NET105.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.HasKey("Id");
 

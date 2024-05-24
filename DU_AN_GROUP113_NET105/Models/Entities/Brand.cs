@@ -7,7 +7,7 @@ namespace DU_AN_GROUP113_NET105.Models.Entities
         public Guid Id { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(40)]
         public string Name { get; set; }
 
         //Quan he
