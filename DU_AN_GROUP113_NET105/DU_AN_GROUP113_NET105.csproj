@@ -30,4 +30,43 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\Customer_Assets\.sass-cache\3fcd99d0c8b91f50f06b0715ce73ad297a6fc258\_base.scssc" />
+    <None Include="wwwroot\Customer_Assets\.sass-cache\3fcd99d0c8b91f50f06b0715ce73ad297a6fc258\_mixins.scssc" />
+    <None Include="wwwroot\Customer_Assets\.sass-cache\3fcd99d0c8b91f50f06b0715ce73ad297a6fc258\_variables.scssc" />
+    <None Include="wwwroot\Customer_Assets\.sass-cache\58d96aa2f3ca6831ea65d734678a63e337572170\style.scssc" />
+    <None Include="wwwroot\Customer_Assets\.sass-cache\8d96c3a14a0bb8e118b2f4f0ff234b926fa1678e\_buttons.scssc" />
+    <None Include="wwwroot\Customer_Assets\.sass-cache\8d96c3a14a0bb8e118b2f4f0ff234b926fa1678e\_responsive.scssc" />
+    <None Include="wwwroot\Customer_Assets\.sass-cache\8d96c3a14a0bb8e118b2f4f0ff234b926fa1678e\_sections.scssc" />
+    <None Include="wwwroot\Customer_Assets\.sass-cache\8d96c3a14a0bb8e118b2f4f0ff234b926fa1678e\_typography.scssc" />
+    <None Include="wwwroot\Customer_Assets\.sass-cache\ef29edb4d21face4cdada241cd6b836dafbe5b2a\_footer.scssc" />
+    <None Include="wwwroot\Customer_Assets\.sass-cache\ef29edb4d21face4cdada241cd6b836dafbe5b2a\_header.scssc" />
+    <None Include="wwwroot\Customer_Assets\.sass-cache\ef29edb4d21face4cdada241cd6b836dafbe5b2a\_nav.scssc" />
+    <None Include="wwwroot\Customer_Assets\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\Customer_Assets\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\Customer_Assets\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\Customer_Assets\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\Customer_Assets\js\bootstrap.js" />
+    <None Include="wwwroot\Customer_Assets\js\custom.js" />
+    <None Include="wwwroot\Customer_Assets\js\jquery.simpleGallery.js" />
+    <None Include="wwwroot\Customer_Assets\js\jquery.simpleLens.js" />
+    <None Include="wwwroot\Customer_Assets\js\jquery.smartmenus.bootstrap.js" />
+    <None Include="wwwroot\Customer_Assets\js\jquery.smartmenus.js" />
+    <None Include="wwwroot\Customer_Assets\js\nouislider.js" />
+    <None Include="wwwroot\Customer_Assets\js\sequence-theme.modern-slide-in.js" />
+    <None Include="wwwroot\Customer_Assets\js\sequence.js" />
+    <None Include="wwwroot\Customer_Assets\js\slick.js" />
+    <None Include="wwwroot\Customer_Assets\scss\base\_base.scss" />
+    <None Include="wwwroot\Customer_Assets\scss\base\_mixins.scss" />
+    <None Include="wwwroot\Customer_Assets\scss\base\_variables.scss" />
+    <None Include="wwwroot\Customer_Assets\scss\layouts\_footer.scss" />
+    <None Include="wwwroot\Customer_Assets\scss\layouts\_header.scss" />
+    <None Include="wwwroot\Customer_Assets\scss\layouts\_nav.scss" />
+    <None Include="wwwroot\Customer_Assets\scss\modules\_buttons.scss" />
+    <None Include="wwwroot\Customer_Assets\scss\modules\_responsive.scss" />
+    <None Include="wwwroot\Customer_Assets\scss\modules\_sections.scss" />
+    <None Include="wwwroot\Customer_Assets\scss\modules\_typography.scss" />
+    <None Include="wwwroot\Customer_Assets\scss\style.scss" />
+  </ItemGroup>
+
 </Project>

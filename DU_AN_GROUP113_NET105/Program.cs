@@ -31,9 +31,19 @@ namespace DU_AN_GROUP113_NET105
 
             app.UseAuthorization();
 
-            app.MapControllerRoute(
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
                 name: "default",
                 pattern: "{area=Admin}/{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(
+                name: "areas",
+                pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+            });
+
+            
+                
 
             app.Run();
         }
