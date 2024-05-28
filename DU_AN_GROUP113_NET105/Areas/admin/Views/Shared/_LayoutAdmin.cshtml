@@ -118,16 +118,16 @@
                         <div class="collapse" id="collapseCustomer" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#CustomerCollapse" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                    Client
+                                    Customer
                                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                 </a>
                                 <div class="collapse" id="CustomerCollapse" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="ClientAdd.html">Add</a>
-                                        <a class="nav-link" href="ClientUpdate.html">Update</a>
-                                        <a class="nav-link" href="ClientDelete.html">Delete</a>
-                                        <a class="nav-link" href="ClientDetail.html">Detail</a>
-                                        <a class="nav-link" href="ClientIndex.html">Index</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Customers" asp-action="Create">Add</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Customers" asp-action="Update">Update</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Customers" asp-action="Delete">Delete</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Customers" asp-action="Details">Detail</a>
+                                        <a class="nav-link" asp-area="Admin" asp-controller="Customers" asp-action="Index">List</a>
                                     </nav>
                                 </div>
                             </nav>
@@ -278,7 +278,10 @@
             </nav>
         </div>
         <div id="layoutSidenav_content">
-            @RenderBody()
+            <div class="p-4">
+                @RenderBody()
+            </div>
+            
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">

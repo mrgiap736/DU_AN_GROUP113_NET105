@@ -9,5 +9,10 @@ namespace DU_AN_GROUP113_NET105.Areas.Customer.Controllers
         {
             return View();
         }
+
+        public IActionResult Error()
+        {
+            return View();  
+        }
     }
 }

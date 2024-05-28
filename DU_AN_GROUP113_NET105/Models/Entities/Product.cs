@@ -32,10 +32,12 @@ namespace DU_AN_GROUP113_NET105.Models.Entities
         public string Details { get; set; }
 
         //các quan hệ 
+        public string SizeCategory { get; set; }
         public Guid? BrandId { get; set; }
         public Guid? ProductCategoryId { get; set; }
         public Guid? SupplierId { get; set; }
 
+        public Size Size { get; set; }
         public Brand? Brand { get; set; }
         public Supplier? Supplier { get; set; }
         public ProductCategory? ProductCategory { get; set; }
