@@ -38,5 +38,6 @@ namespace DU_AN_GROUP113_NET105.Models.Data
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
+        public DbSet<DU_AN_GROUP113_NET105.Models.Entities.Size> Size { get; set; }
     }
 }
